@@ -10,7 +10,9 @@
 #include <sys/types.h>
 
 int printout(char *str);
-void display_prompt();
-int betty();
+void display_prompt(void);
+int betty(void);
 void execute_ozi(char *input);
+extern char *args[100];
+extern char **environ;
 #endif

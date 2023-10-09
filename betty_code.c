@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * main - Processing betty code
+ * betty - Processing betty code
  *
  * Return: Always 0:
  */
-int betty()
+int betty(void)
 {
 	int index;
 
