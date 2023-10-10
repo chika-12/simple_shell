@@ -7,17 +7,17 @@
  */
 void display_prompt(void)
 {
-	char input[100];
+	char ihe_ntiye[100];
 
 	while (1)
 	{
 		printout("chika$ ");
-		fgets(input, sizeof(input), stdin);
-		input[strcspn(input, "\n")] = '\0';
+		fgets(ihe_ntiye, sizeof(ihe_ntiye), stdin);
+		ihe_ntiye[strcspn(ihe_ntiye, "\n")] = '\0';
 
-		if (input[0] != '\0')
+		if (ihe_ntiye[0] != '\0')
 		{
-			execute_ozi(input);
+			execute_ozi(ihe_ntiye);
 		}
 	}
 }

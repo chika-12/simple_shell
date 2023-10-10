@@ -6,8 +6,8 @@
  *
  * Return: Ozi
  */
-int printout(char *str)
+int printout(char *oku)
 {
-	write(STDOUT_FILENO, str, strlen(str));
+	write(STDOUT_FILENO, oku, strlen(oku));
 	return (0);
 }

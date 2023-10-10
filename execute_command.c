@@ -20,13 +20,13 @@ void execute_ozi(char *input)
 	else if (nwa_pid == 0)
 	{
 		/* Tokenize the input to get the command and arguments*/
-		char *token = strtok(input, " ");
+		char *ihe = strtok(input, " ");
 		int i = 0;
 
-		while (token != NULL)
+		while (ihe != NULL)
 		{
-			args[i++] = token;
-			token = strtok(NULL, " ");
+			args[i++] = ihe;
+			ihe = strtok(NULL, " ");
 		}
 		args[i] = NULL;
 
