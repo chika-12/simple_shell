@@ -2,7 +2,7 @@
 /**
  * printout - Prints to standard out put
  *
- * @str: Ozi:
+ * @oku: Ozi:
  *
  * Return: Ozi
  */
