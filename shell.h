@@ -8,9 +8,11 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+#include <stdarg.h>
 
-int printout(char *str);
+int printout(const char *edemede, ...);
 void display_prompt(void);
+int specification(const char *edemede, va_list(list_of_ndeputa));
 int betty(void);
 void execute_ozi(char *input);
 extern char *args[100];

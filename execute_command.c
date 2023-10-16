@@ -35,6 +35,7 @@ void execute_ozi(char *input)
 			perror("execve");
 			exit(EXIT_FAILURE);
 		}
+		/*Remember to pull this code to a new function*/
 	}
 	else
 	{

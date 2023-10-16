@@ -16,7 +16,12 @@ void display_prompt(void)
 		printout("chika$ ");
 		if (fgets(ihe_ntiye, sizeof(ihe_ntiye), stdin) == NULL)
 		{
-			break;
+			if (feof(stdin));
+			{
+				printout("\n");
+				exit(EXIT_SUCCESS);
+			}
+
 		}
 
 		ihe_ntiye[strcspn(ihe_ntiye, "\n")] = '\0';
@@ -34,7 +39,7 @@ void display_prompt(void)
 
 			if (box[index] == NULL)
 			{
-				printf("%s\n", ihe_ntiye);
+				printout("%s\n", ihe_ntiye);
 			}
 
 		}
