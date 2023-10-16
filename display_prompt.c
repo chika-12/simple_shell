@@ -16,7 +16,7 @@ void display_prompt(void)
 		printout("chika$ ");
 		if (fgets(ihe_ntiye, sizeof(ihe_ntiye), stdin) == NULL)
 		{
-			if (feof(stdin));
+			if (feof(stdin))
 			{
 				printout("\n");
 				exit(EXIT_SUCCESS);
