@@ -9,6 +9,8 @@ void execute_ozi(char *input)
 	pid_t nwa_pid = fork();
 	int status;
 	char *args[100];
+	char executable_path[256];
+	const char *path = "/bin";
 
 	if (nwa_pid == -1)
 	{
@@ -18,8 +20,9 @@ void execute_ozi(char *input)
 	else if (nwa_pid == 0)
 	{
 		ntisasi(input, args);
+		uzor(args[0], path, executable_path);
 
-		if (execve(args[0], args, environ) == -1)
+		if (execve(executable_path, args, environ) == -1)
 		{
 			perror("execve");
 			exit(EXIT_FAILURE);
