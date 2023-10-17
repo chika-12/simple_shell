@@ -8,7 +8,6 @@
 void display_prompt(void)
 {
 	char ihe_ntiye[100];
-	int index;
 
 	while (1)
 	{
