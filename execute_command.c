@@ -4,12 +4,10 @@
  * @input: string input
  * Return: 0
  */
-
 void execute_ozi(char *input)
 {
 	pid_t nwa_pid = fork();
 	int status;
-	int i;
 	char *args[100];
 
 	if (nwa_pid == -1)
@@ -19,31 +17,35 @@ void execute_ozi(char *input)
 	}
 	else if (nwa_pid == 0)
 	{
-		/* Tokenize the input to get the command and arguments*/
-		char *ihe = strtok(input, " ");
-		int i = 0;
-
-		while (ihe != NULL)
-		{
-			args[i++] = ihe;
-			ihe = strtok(NULL, " ");
-		}
-		args[i] = NULL;
+		ntisasi(input, args);
 
 		if (execve(args[0], args, environ) == -1)
 		{
 			perror("execve");
 			exit(EXIT_FAILURE);
 		}
-		/*Remember to pull this code to a new function*/
 	}
 	else
 	{
 		waitpid(nwa_pid, &status, 0);
 	}
-	for (i = 0; args[i] != NULL; i++)
-	{
-		free(args[i]);
-	}
 }
+/**
+ * ntisasi - Tokenizes the string input
+ * @webata: String input
+ * @args: arguments for iteration
+ * Return: void
+ */
+void ntisasi(char *webata, char *args[])
+{
+	int i = 0;
 
+	char *ihe = strtok(webata, " ");
+
+	while (ihe != NULL)
+	{
+		args[i++] = ihe;
+		ihe = strtok(NULL, " ");
+	}
+	args[i] = NULL;
+}
