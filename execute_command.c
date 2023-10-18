@@ -24,7 +24,7 @@ void execute_ozi(char *input)
 
 		if (execve(executable_path, args, environ) == -1)
 		{
-			perror("execve");
+			perror("");
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -43,12 +43,12 @@ void ntisasi(char *webata, char *args[])
 {
 	int i = 0;
 
-	char *ihe = strtok(webata, " ");
+	char *ihe = _strtok(webata, " ");
 
 	while (ihe != NULL)
 	{
 		args[i++] = ihe;
-		ihe = strtok(NULL, " ");
+		ihe = _strtok(NULL, " ");
 	}
 	args[i] = NULL;
 }

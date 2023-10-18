@@ -7,5 +7,6 @@
 int main(void)
 {
 	display_prompt();
+	/*free(ihe_ntiye);*/
 	return (0);
 }
