@@ -5,6 +5,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <errno.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 #define SIZE 1024
 #define MAX_ARGS 1000
@@ -16,5 +18,6 @@ void my_strtok(char *str, char *delim);
 int my_execve(char *pathname, char *argv[], char *envp[]);
 int _strcmp(char *s1, char *s2);
 int execute_command(char *command);
+int my_fork(void);
 
 #endif

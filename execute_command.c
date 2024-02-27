@@ -6,12 +6,10 @@
  */
 int execute_command(char *command)
 {
-	/*Tokenizing the string before excution*/
 	char *args[MAX_ARGS];
 	int i = 0;
 
 	args[i] = strtok(command, "\n");
-
 	while (args[i] != NULL && i < MAX_ARGS - 1)
 	{
 		i++;
@@ -26,8 +24,7 @@ int execute_command(char *command)
 		}
 		else
 		{
-			/*Calling exec*/
-			my_execve(args[0], args, NULL);
+			my_fork();
 		}
 	}
 	return (0);
